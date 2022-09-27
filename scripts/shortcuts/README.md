@@ -1,0 +1,1 @@
+This directory contain scripts to run/open any application that is installed wihtin the container 

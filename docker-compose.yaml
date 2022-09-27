@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  dev:
+    build: .
+    container_name: dev
+    privileged: true
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes:
+      - ./home:/home/developer
+      - .X11-unix:/tmp/.X11-unix
+      - C:\Users\rodrigo2\.ssh:/home/developer/.ssh
+      - d:\projetos:/home/developer/projetos
+    environment:
+      - DISPLAY=192.168.56.1:0.0
+    network_mode: host
